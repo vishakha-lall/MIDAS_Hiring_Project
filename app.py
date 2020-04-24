@@ -21,7 +21,6 @@ def index_single_test():
     result = ""
     if single_test.validate_on_submit():
         url = single_test.url.data
-        single_test.url.data = ""
         result = get_prediction(url)
     return render_template('single-test.html', form=single_test, message=result)
 
