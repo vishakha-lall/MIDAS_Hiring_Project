@@ -1,0 +1,32 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+{{ super() }}
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+
+
+{% block title %}
+Reddit post Flair Prediction
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <h1>Reddit post Flair Prediction</h1>
+
+      <p class="lead">This is a web application running Reddit Flair Prediction algorithm in the backend. Try it out! </p>
+
+      {{ wtf.quick_form(form) }}
+
+      <p class="space-above"><strong>The predicted flair is {{ message }}</strong></p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
