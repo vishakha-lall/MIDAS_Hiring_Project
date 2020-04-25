@@ -3,8 +3,6 @@ from dotenv import load_dotenv
 load_dotenv()
 import os
 import string
-import spacy
-sp = spacy.load('en')
 from nltk.stem import WordNetLemmatizer
 import contractions
 from nltk.tokenize import word_tokenize
@@ -32,7 +30,7 @@ def get_submission_data(input_url):
 
 def get_processed_data(input_data):
     punc = string.punctuation
-    stop_words = set(sp.Defaults.stop_words)
+    stop_words = set(stopwords.words('english'))
     wnl = WordNetLemmatizer()
     processed_data = list()
     for data in input_data:
