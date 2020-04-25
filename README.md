@@ -26,6 +26,12 @@ The code has been built on Windows 10 OS with **Python 3.7**.
 
 1. Use `requirements.txt` to install dependencies `pip install -r requirements.txt` . Using a virtual environment is recommended. 
 2. The code uses some popular corpus' by nltk. Download these from the list available in `nltk.txt` as `nltk.download("<corpus_name>")`.
+3. Create a `.env` file with Reddit configs
+```
+CLIENT_ID=<your client ID>
+CLIENT_SECRET=<your client secret>
+USER_AGENT=<your user agent>
+```
 
 #### Running the web application
 
